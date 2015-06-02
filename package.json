@@ -4,7 +4,8 @@
   "description": "A light weight text based adventure library",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start"
+    "test": "node_modules/karma/bin/karma start",
+    "build": "browserify -t coffeeify -o dist/adventure.js src/main.coffee"
   },
   "repository": {
     "type": "git",
