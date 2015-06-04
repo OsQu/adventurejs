@@ -17,7 +17,7 @@ describe "Room", ->
 
   it "prints the description", ->
     @room.describe()
-    expect(@spec_printer.out).toContain "Main hall"
+    expect(@spec_printer.out).toContain "You are in Main hall"
 
   it "prints other adjacent rooms", ->
     westRoom = new Room("a door that leads to big hall", "Big hall")

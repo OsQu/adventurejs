@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/karma/bin/karma start",
-    "build": "browserify -t coffeeify -o dist/adventure.js src/main.coffee"
+    "build": "browserify -t coffeeify --standalone AdventureJS -o dist/adventure.js src/main.coffee"
   },
   "repository": {
     "type": "git",

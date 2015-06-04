@@ -1,5 +1,12 @@
+Room = require("./room.coffee")
+World = require("./world.coffee")
+
 class AdventureJS
-  sum: (a, b) ->
-    a + b
+  constructor: ->
+    @world = new World()
+
+  buildRoom: (entranceDescription, description) ->
+    new Room(entranceDescription, description)
+
 
 module.exports = AdventureJS

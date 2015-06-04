@@ -1,6 +1,6 @@
 class Room
   constructor: (@entranceDescription, @description, opts = {}) ->
-    @printer = opts.printer || console.log
+    @printer = opts.printer || console.log.bind(console)
 
     @exits =
       north: null
@@ -9,8 +9,9 @@ class Room
       west: null
 
   describe: ->
-    @printer @description
+    @printer "You are in #{@description}"
     @describeRoom(direction, room) for direction, room of @exits
+    true
 
   describeRoom: (direction, room) ->
     return unless room
